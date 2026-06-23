@@ -1,13 +1,34 @@
 
-.cabecalho {
-padding: 15px 25px;
-}
+.cabecalho { 
+  background-color: #21a0c7; /* Esse código deixa o fundo da página em um tom de azul turquesa vibrante */ 
+  display: flex; /* Com display: flex, transformaremos o cabeçalho em um contêiner flexível.*/ 
+  justify-content: space-between; /* O "justify-content: space-between" posicionará os elementos nas extremidades, um à esquerda e outro à direita. */
+  align-items: center; /* "O align-items: center" alinhará verticalmente todos os itens no centro do contêiner. */
+  padding: 15px 25px; /* padding cria espaço interno (conteúdo “respira” dentro do elemento).*/ 
+} 
+
+.cabecalho-link { 
+  color: #fff; /* Define a cor do texto como branco puro. */ 
+  text-decoration: none; /* Serve para remover decorações padrão do texto, como sublinhados em links. */ 
+  font-size: 24px; /* Define o tamanho da fonte do texto */
+} 
+
 
 .cartao {
-width: 260px;
-height: 200px;
+width: 260px; /* Modifica a largura */
+height: 200px; /* Modifica a altura */
 }
 
 .cartao-imagem {
-width: 100%;
+width: 100%; /* Modifica a largura */
 }
+
+body { 
+  display: flex; /* Com display: flex, transformaremos o cabeçalho em um contêiner flexível. */ 
+  flex-direction: column; /* flex-direction: column indicará que os elementos filhos (header, main e footer) devem ser organizados de cima para baixo. */
+  min-height: 100vh; /* A propriedade min-height: 100vh garante que o corpo ocupe 100% da altura da tela, mesmo com pouco conteúdo. */
+} 
+
+main { 
+  flex: 1; /* Faz com que este elemento ocupe todo o espaço disponível restante de forma igualitária */
+} 
