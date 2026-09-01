@@ -9,26 +9,15 @@
 
 <style>
 
-/* =====================================================
-   CONFIGURAÇÕES GERAIS
-===================================================== */
-
 :root {
     --preto: #050505;
-    --preto2: #0a0a0a;
     --cinza: #171717;
-    --cinza2: #222222;
-    --cinza3: #2d2d2d;
-
     --azul: #00d9ff;
     --azul2: #008cff;
-
     --branco: #ffffff;
     --texto: #bdbdbd;
-
     --verde: #00ffb3;
     --amarelo: #ffd000;
-
     --escala: 1;
 }
 
@@ -45,13 +34,9 @@ html {
 body {
     background: var(--preto);
     color: var(--branco);
-
     font-family: Arial, Helvetica, sans-serif;
-
     font-size: calc(17px * var(--escala));
-
     line-height: 1.7;
-
     overflow-x: hidden;
 }
 
@@ -64,28 +49,22 @@ button {
     font-family: inherit;
 }
 
-/* =====================================================
-   ACESSIBILIDADE
-===================================================== */
+/* ================= ACESSIBILIDADE ================= */
 
 .accessibility {
     position: sticky;
     top: 0;
-
     z-index: 1000;
 
     display: flex;
     justify-content: center;
     align-items: center;
-
     flex-wrap: wrap;
 
     gap: 10px;
-
     padding: 12px;
 
     background: rgba(5,5,5,0.96);
-
     backdrop-filter: blur(15px);
 
     border-bottom: 1px solid rgba(0,217,255,0.25);
@@ -99,15 +78,12 @@ button {
     padding: 8px 15px;
 
     color: white;
-
     background: var(--cinza);
 
     border: 1px solid rgba(0,217,255,0.5);
-
     border-radius: 8px;
 
     cursor: pointer;
-
     font-weight: bold;
 
     transition: 0.25s;
@@ -115,7 +91,6 @@ button {
 
 .accessibility button:hover {
     color: black;
-
     background: var(--azul);
 
     box-shadow: 0 0 20px rgba(0,217,255,0.55);
@@ -123,19 +98,15 @@ button {
     transform: translateY(-2px);
 }
 
-/* =====================================================
-   CABEÇALHO
-===================================================== */
+/* ================= CABEÇALHO ================= */
 
 header {
     position: relative;
 
-    min-height: 680px;
+    min-height: 600px;
 
     display: flex;
-
     align-items: center;
-
     justify-content: center;
 
     overflow: hidden;
@@ -146,13 +117,11 @@ header {
             rgba(0,217,255,0.12),
             transparent 30%
         ),
-
         radial-gradient(
             circle at 20% 80%,
             rgba(0,140,255,0.10),
             transparent 25%
         ),
-
         #050505;
 }
 
@@ -168,7 +137,6 @@ header::before {
     top: -180px;
 
     border: 1px solid rgba(0,217,255,0.25);
-
     border-radius: 50%;
 }
 
@@ -184,33 +152,24 @@ header::after {
     top: -50px;
 
     border: 1px solid rgba(0,217,255,0.15);
-
     border-radius: 50%;
 }
 
 .container {
     width: min(1150px, 92%);
-
     margin: auto;
 }
 
-/* =====================================================
-   CONTEÚDO PRINCIPAL DO HEADER
-===================================================== */
-
 .header-content {
     position: relative;
-
     z-index: 2;
 
     width: 100%;
 
     display: flex;
-
     flex-direction: column;
 
     align-items: center;
-
     justify-content: center;
 
     text-align: center;
@@ -220,19 +179,18 @@ header::after {
 
 .header-content > div:first-child {
     display: flex;
-
     flex-direction: column;
 
     align-items: center;
-
     text-align: center;
+
+    width: 100%;
 }
 
 .tag {
     display: inline-block;
 
     margin-bottom: 20px;
-
     padding: 7px 15px;
 
     color: var(--azul);
@@ -240,18 +198,17 @@ header::after {
     background: rgba(0,217,255,0.07);
 
     border: 1px solid rgba(0,217,255,0.4);
-
     border-radius: 30px;
 
     font-size: 0.8rem;
-
     font-weight: bold;
 
     letter-spacing: 2px;
 }
 
 header h1 {
-    max-width: 900px;
+    width: 100%;
+    max-width: 1000px;
 
     margin: 0 auto 20px;
 
@@ -273,7 +230,8 @@ header h1 span {
 }
 
 .header-description {
-    max-width: 650px;
+    width: 100%;
+    max-width: none;
 
     margin: 0 auto 30px;
 
@@ -284,15 +242,16 @@ header h1 span {
     font-size: 1.15rem;
 }
 
-/* =====================================================
-   BOTÕES
-===================================================== */
+.header-description strong {
+    color: white;
+}
+
+/* ================= BOTÕES ================= */
 
 .buttons {
     display: flex;
 
     justify-content: center;
-
     align-items: center;
 
     flex-wrap: wrap;
@@ -325,9 +284,6 @@ header h1 span {
     background: white;
 
     transform: translateY(-3px);
-
-    box-shadow:
-        0 0 30px rgba(255,255,255,0.3);
 }
 
 .btn-outline {
@@ -344,116 +300,9 @@ header h1 span {
     background: var(--azul);
 
     transform: translateY(-3px);
-
-    box-shadow:
-        0 0 25px rgba(0,217,255,0.4);
 }
 
-/* =====================================================
-   OLHO
-===================================================== */
-
-.eye-container {
-    position: relative;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    min-height: 280px;
-}
-
-.eye-glow {
-    position: absolute;
-
-    width: 300px;
-    height: 300px;
-
-    background:
-        radial-gradient(
-            circle,
-            rgba(0,217,255,0.3),
-            transparent 65%
-        );
-
-    filter: blur(20px);
-}
-
-.eye {
-    position: relative;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    width: 270px;
-    height: 170px;
-
-    background: white;
-
-    border: 5px solid var(--azul);
-
-    border-radius:
-        70% 10% 70% 10% /
-        70% 10% 70% 10%;
-
-    transform: rotate(45deg);
-
-    box-shadow:
-        0 0 30px rgba(0,217,255,0.7),
-        0 0 80px rgba(0,217,255,0.25);
-
-    animation: pulse 4s ease-in-out infinite;
-}
-
-.eye::before {
-    content: "";
-
-    width: 105px;
-    height: 105px;
-
-    background:
-        radial-gradient(
-            circle,
-
-            #000 0 18%,
-
-            #00d9ff 20% 45%,
-
-            #008cff 48%,
-
-            #001b28 70%
-        );
-
-    border-radius: 50%;
-
-    box-shadow:
-        0 0 25px var(--azul);
-}
-
-@keyframes pulse {
-
-    0%,
-    100% {
-        box-shadow:
-            0 0 30px rgba(0,217,255,0.7),
-            0 0 80px rgba(0,217,255,0.2);
-    }
-
-    50% {
-        box-shadow:
-            0 0 50px rgba(0,217,255,0.95),
-            0 0 120px rgba(0,217,255,0.3);
-    }
-}
-
-/* =====================================================
-   MENU
-===================================================== */
+/* ================= MENU ================= */
 
 nav {
     position: sticky;
@@ -499,14 +348,9 @@ nav {
     color: var(--azul);
 
     background: rgba(0,217,255,0.07);
-
-    box-shadow:
-        inset 0 -2px var(--azul);
 }
 
-/* =====================================================
-   CONTEÚDO
-===================================================== */
+/* ================= CONTEÚDO ================= */
 
 main {
     padding: 70px 0;
@@ -553,9 +397,6 @@ main {
             var(--azul),
             transparent
         );
-
-    box-shadow:
-        0 0 15px var(--azul);
 }
 
 .section-heading {
@@ -572,7 +413,6 @@ main {
     display: flex;
 
     align-items: center;
-
     justify-content: center;
 
     flex-shrink: 0;
@@ -587,9 +427,6 @@ main {
     border-radius: 12px;
 
     font-weight: 900;
-
-    box-shadow:
-        0 0 20px rgba(0,217,255,0.25);
 }
 
 .section h2 {
@@ -614,9 +451,7 @@ main {
     color: var(--azul);
 }
 
-/* =====================================================
-   CARDS
-===================================================== */
+/* ================= CARDS ================= */
 
 .cards {
     display: grid;
@@ -649,27 +484,6 @@ main {
     border-radius: 15px;
 
     transition: 0.3s;
-
-    overflow: hidden;
-}
-
-.card::before {
-    content: "";
-
-    position: absolute;
-
-    left: 0;
-    top: 0;
-
-    width: 3px;
-    height: 0;
-
-    background: var(--azul);
-
-    box-shadow:
-        0 0 15px var(--azul);
-
-    transition: 0.3s;
 }
 
 .card:hover {
@@ -677,21 +491,12 @@ main {
 
     border-color:
         rgba(0,217,255,0.45);
-
-    box-shadow:
-        0 15px 35px rgba(0,0,0,0.5),
-        0 0 20px rgba(0,217,255,0.06);
-}
-
-.card:hover::before {
-    height: 100%;
 }
 
 .card-icon {
     display: flex;
 
     align-items: center;
-
     justify-content: center;
 
     width: 55px;
@@ -722,9 +527,7 @@ main {
     color: #929292;
 }
 
-/* =====================================================
-   ALERTA
-===================================================== */
+/* ================= ALERTA ================= */
 
 .alert {
     display: flex;
@@ -751,9 +554,7 @@ main {
     border-radius: 10px;
 }
 
-/* =====================================================
-   DICAS
-===================================================== */
+/* ================= DICAS ================= */
 
 .tips {
     display: grid;
@@ -783,22 +584,12 @@ main {
     border: 1px solid #292929;
 
     border-radius: 10px;
-
-    transition: 0.2s;
-}
-
-.tip:hover {
-    border-color:
-        rgba(0,217,255,0.4);
-
-    background: #1b1b1b;
 }
 
 .check {
     display: flex;
 
     align-items: center;
-
     justify-content: center;
 
     flex-shrink: 0;
@@ -815,9 +606,116 @@ main {
     font-weight: bold;
 }
 
-/* =====================================================
-   EQUIPE
-===================================================== */
+/* ================= PROTÓTIPO ================= */
+
+.prototype {
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(280px, 1fr)
+        );
+
+    gap: 20px;
+
+    margin-top: 25px;
+}
+
+.prototype-card {
+    padding: 28px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #1b1b1b,
+            #101010
+        );
+
+    border: 1px solid #2b2b2b;
+
+    border-radius: 15px;
+
+    transition: 0.3s;
+}
+
+.prototype-card:hover {
+    transform: translateY(-6px);
+
+    border-color:
+        rgba(0,217,255,0.45);
+
+    box-shadow:
+        0 10px 30px rgba(0,217,255,0.08);
+}
+
+.prototype-icon {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 65px;
+    height: 65px;
+
+    margin-bottom: 18px;
+
+    color: var(--azul);
+
+    background:
+        rgba(0,217,255,0.08);
+
+    border:
+        1px solid rgba(0,217,255,0.3);
+
+    border-radius: 14px;
+
+    font-size: 32px;
+}
+
+.prototype-card h3 {
+    margin-bottom: 10px;
+
+    color: white;
+
+    font-size: 1.25rem;
+}
+
+.prototype-card p {
+    color: #929292;
+}
+
+.prototype-highlight {
+    margin-top: 25px;
+
+    padding: 25px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(0,217,255,0.10),
+            rgba(0,140,255,0.04)
+        );
+
+    border:
+        1px solid rgba(0,217,255,0.35);
+
+    border-radius: 14px;
+}
+
+.prototype-highlight h3 {
+    margin-bottom: 10px;
+
+    color: var(--azul);
+
+    font-size: 1.3rem;
+}
+
+.prototype-highlight p {
+    color: #c7c7c7;
+}
+
+/* ================= INTEGRANTES ================= */
 
 .team {
     display: grid;
@@ -849,24 +747,20 @@ main {
 
     border-radius: 14px;
 
-    transition: 0.25s;
+    transition: 0.3s;
 }
 
 .member:hover {
-    border-color:
-        rgba(0,217,255,0.5);
-
     transform: translateY(-5px);
 
-    box-shadow:
-        0 10px 25px rgba(0,217,255,0.06);
+    border-color:
+        rgba(0,217,255,0.45);
 }
 
 .avatar {
     display: flex;
 
     align-items: center;
-
     justify-content: center;
 
     width: 58px;
@@ -881,9 +775,6 @@ main {
     border-radius: 50%;
 
     font-weight: 900;
-
-    box-shadow:
-        0 0 18px rgba(0,217,255,0.3);
 }
 
 .member strong {
@@ -894,16 +785,7 @@ main {
     font-size: 1.05rem;
 }
 
-/* IMPORTANTE:
-   REMOVE QUALQUER TEXTO ABAIXO DOS NOMES */
-
-.member span {
-    display: none !important;
-}
-
-/* =====================================================
-   FONTES
-===================================================== */
+/* ================= FONTES ================= */
 
 .sources {
     display: grid;
@@ -931,22 +813,9 @@ main {
     border: 1px solid #292929;
 
     border-radius: 10px;
-
-    transition: 0.2s;
 }
 
-.sources li:hover {
-    color: var(--azul);
-
-    border-color:
-        rgba(0,217,255,0.35);
-
-    transform: translateX(4px);
-}
-
-/* =====================================================
-   RODAPÉ
-===================================================== */
+/* ================= RODAPÉ ================= */
 
 footer {
     padding-top: 50px;
@@ -994,13 +863,10 @@ footer {
     font-size: 0.85rem;
 }
 
-/* =====================================================
-   ALTO CONTRASTE
-===================================================== */
+/* ================= ALTO CONTRASTE ================= */
 
 body.contraste {
     background: #000;
-
     color: #fff;
 }
 
@@ -1008,7 +874,8 @@ body.contraste .section,
 body.contraste .card,
 body.contraste .tip,
 body.contraste .member,
-body.contraste .sources li {
+body.contraste .sources li,
+body.contraste .prototype-card {
     background: #000;
 
     color: #fff;
@@ -1019,19 +886,13 @@ body.contraste .sources li {
 body.contraste p,
 body.contraste .subtitle,
 body.contraste .card p,
-body.contraste .member span {
+body.contraste .prototype-card p {
     color: #fff;
 }
 
-/* =====================================================
-   RESPONSIVIDADE
-===================================================== */
+/* ================= RESPONSIVIDADE ================= */
 
 @media (max-width: 850px) {
-
-    header {
-        min-height: 650px;
-    }
 
     header h1 {
         font-size: 4rem;
@@ -1050,7 +911,6 @@ body.contraste .member span {
 
     .accessibility {
         position: relative;
-
         flex-direction: column;
     }
 
@@ -1060,7 +920,6 @@ body.contraste .member span {
 
     nav {
         position: relative;
-
         top: 0;
     }
 
@@ -1072,13 +931,8 @@ body.contraste .member span {
         text-align: center;
     }
 
-    header {
-        min-height: 700px;
-    }
-
     header h1 {
         font-size: 3.3rem;
-
         letter-spacing: -2px;
     }
 
@@ -1089,16 +943,6 @@ body.contraste .member span {
     .section::before {
         left: 20px;
     }
-
-    .eye {
-        width: 210px;
-        height: 130px;
-    }
-
-    .eye::before {
-        width: 80px;
-        height: 80px;
-    }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -1107,7 +951,6 @@ body.contraste .member span {
     *::before,
     *::after {
         animation: none !important;
-
         transition: none !important;
     }
 }
@@ -1115,18 +958,13 @@ body.contraste .member span {
 </style>
 </head>
 
-
 <body>
 
-<!-- =====================================================
-     BARRA DE ACESSIBILIDADE
-===================================================== -->
+<!-- ================= ACESSIBILIDADE ================= -->
 
 <div class="accessibility">
 
-    <strong>
-        ♿ Acessibilidade
-    </strong>
+    <strong>♿ Acessibilidade</strong>
 
     <button id="aumentar">
         A+ Aumentar fonte
@@ -1144,12 +982,17 @@ body.contraste .member span {
         ◐ Alto contraste
     </button>
 
+    <button id="leitura">
+        🔊 Iniciar leitura
+    </button>
+
+    <button id="pararLeitura">
+        ⏹ Parar leitura
+    </button>
+
 </div>
 
-
-<!-- =====================================================
-     CABEÇALHO
-===================================================== -->
+<!-- ================= CABEÇALHO ================= -->
 
 <header id="inicio">
 
@@ -1162,37 +1005,25 @@ body.contraste .member span {
             </span>
 
             <h1>
-
                 OLHOS
                 <br>
-
-                <span>
-                    NO FUTURO
-                </span>
-
+                <span>NO FUTURO</span>
             </h1>
 
             <p class="header-description">
-
-                Um espaço informativo sobre presbiopia,
-                criado para unir ciência, tecnologia,
-                programação e acessibilidade.
-
+                Um espaço informativo sobre
+                <strong>presbiopia</strong>,
+                ciência, física, tecnologia e
+                acessibilidade digital.
             </p>
 
             <div class="buttons">
 
-                <a
-                    href="#sobre"
-                    class="btn btn-primary"
-                >
+                <a href="#sobre" class="btn btn-primary">
                     Explorar o projeto →
                 </a>
 
-                <a
-                    href="#dicas"
-                    class="btn btn-outline"
-                >
+                <a href="#dicas" class="btn btn-outline">
                     Acessibilidade
                 </a>
 
@@ -1200,23 +1031,11 @@ body.contraste .member span {
 
         </div>
 
-
-        <div class="eye-container">
-
-            <div class="eye-glow"></div>
-
-            <div class="eye"></div>
-
-        </div>
-
     </div>
 
 </header>
 
-
-<!-- =====================================================
-     MENU
-===================================================== -->
+<!-- ================= MENU ================= -->
 
 <nav>
 
@@ -1224,33 +1043,14 @@ body.contraste .member span {
 
         <div class="nav-box">
 
-            <a href="#inicio">
-                INÍCIO
-            </a>
-
-            <a href="#sobre">
-                PRESBIOPIA
-            </a>
-
-            <a href="#sintomas">
-                SINTOMAS
-            </a>
-
-            <a href="#fisica">
-                FÍSICA
-            </a>
-
-            <a href="#tratamentos">
-                TRATAMENTOS
-            </a>
-
-            <a href="#dicas">
-                DICAS
-            </a>
-
-            <a href="#projeto">
-                PROJETO
-            </a>
+            <a href="#inicio">INÍCIO</a>
+            <a href="#sobre">PRESBIOPIA</a>
+            <a href="#sintomas">SINTOMAS</a>
+            <a href="#fisica">FÍSICA</a>
+            <a href="#tratamentos">TRATAMENTOS</a>
+            <a href="#dicas">DICAS</a>
+            <a href="#prototipo">PROTÓTIPO</a>
+            <a href="#projeto">INTEGRANTES</a>
 
         </div>
 
@@ -1258,36 +1058,23 @@ body.contraste .member span {
 
 </nav>
 
-
-<!-- =====================================================
-     CONTEÚDO
-===================================================== -->
+<!-- ================= CONTEÚDO ================= -->
 
 <main>
 
 <div class="container">
 
+<!-- 01 -->
 
-<!-- =====================================================
-     01 - PRESBIOPIA
-===================================================== -->
-
-<section
-    id="sobre"
-    class="section"
->
+<section id="sobre" class="section">
 
     <div class="section-heading">
 
-        <div class="number">
-            01
-        </div>
+        <div class="number">01</div>
 
         <div>
 
-            <h2>
-                O que é presbiopia?
-            </h2>
+            <h2>O que é presbiopia?</h2>
 
             <p class="subtitle">
                 Entenda a alteração visual.
@@ -1297,67 +1084,45 @@ body.contraste .member span {
 
     </div>
 
-
     <p>
-
         A <strong>presbiopia</strong> é uma alteração
         visual associada ao envelhecimento natural
         dos olhos.
-
-        Ela acontece quando o olho perde gradualmente
-        parte da capacidade de focar objetos próximos.
-
     </p>
 
-
     <p style="margin-top:15px;">
-
+        Ela acontece quando o olho perde gradualmente
+        parte da capacidade de focar objetos próximos.
         Isso pode tornar atividades como leitura,
         utilização do celular e visualização de textos
         pequenos mais difíceis.
-
     </p>
-
 
     <div class="alert">
 
-        <span>
-            ⚠️
-        </span>
+        <span>⚠️</span>
 
         <p>
-
             Este site possui finalidade educativa.
             Em caso de alterações na visão, procure
             avaliação de um profissional da saúde.
-
         </p>
 
     </div>
 
 </section>
 
+<!-- 02 -->
 
-<!-- =====================================================
-     02 - SINTOMAS
-===================================================== -->
-
-<section
-    id="sintomas"
-    class="section"
->
+<section id="sintomas" class="section">
 
     <div class="section-heading">
 
-        <div class="number">
-            02
-        </div>
+        <div class="number">02</div>
 
         <div>
 
-            <h2>
-                Sintomas
-            </h2>
+            <h2>Sintomas</h2>
 
             <p class="subtitle">
                 Alguns sinais comuns.
@@ -1367,117 +1132,75 @@ body.contraste .member span {
 
     </div>
 
-
     <div class="cards">
 
-
         <article class="card">
 
-            <div class="card-icon">
-                👁️
-            </div>
+            <div class="card-icon">👁️</div>
 
-            <h3>
-                Visão embaçada
-            </h3>
+            <h3>Visão embaçada</h3>
 
             <p>
-
-                Dificuldade para enxergar
-                claramente textos e objetos
-                próximos.
-
+                Dificuldade para enxergar claramente
+                textos e objetos próximos.
             </p>
 
         </article>
 
-
         <article class="card">
 
-            <div class="card-icon">
-                📖
-            </div>
+            <div class="card-icon">📖</div>
 
-            <h3>
-                Dificuldade para ler
-            </h3>
+            <h3>Dificuldade para ler</h3>
 
             <p>
-
-                Letras pequenas podem exigir
-                maior esforço visual.
-
+                Letras pequenas podem exigir maior
+                esforço visual.
             </p>
 
         </article>
 
-
         <article class="card">
 
-            <div class="card-icon">
-                💡
-            </div>
+            <div class="card-icon">💡</div>
 
-            <h3>
-                Mais iluminação
-            </h3>
+            <h3>Mais iluminação</h3>
 
             <p>
-
-                Uma iluminação mais forte pode
-                ser necessária para determinadas
-                tarefas.
-
+                Uma iluminação mais forte pode ser
+                necessária para determinadas tarefas.
             </p>
 
         </article>
 
-
         <article class="card">
 
-            <div class="card-icon">
-                📱
-            </div>
+            <div class="card-icon">📱</div>
 
-            <h3>
-                Afastar objetos
-            </h3>
+            <h3>Afastar objetos</h3>
 
             <p>
-
                 Algumas pessoas precisam afastar
                 celulares e livros para focar.
-
             </p>
 
         </article>
-
 
     </div>
 
 </section>
 
+<!-- 03 -->
 
-<!-- =====================================================
-     03 - FÍSICA
-===================================================== -->
-
-<section
-    id="fisica"
-    class="section"
->
+<section id="fisica" class="section">
 
     <div class="section-heading">
 
-        <div class="number">
-            03
-        </div>
+        <div class="number">03</div>
 
         <div>
 
-            <h2>
-                A física da visão
-            </h2>
+            <h2>A física da visão</h2>
 
             <p class="subtitle">
                 Óptica, luz e acomodação.
@@ -1487,204 +1210,166 @@ body.contraste .member span {
 
     </div>
 
-
     <p>
-
         A visão humana envolve diversos conceitos
         de <strong>óptica</strong>.
-
         A luz entra no olho, sofre refração e é
         focalizada para formar uma imagem na retina.
-
     </p>
 
-
     <div class="cards">
-
 
         <article class="card">
 
-            <div class="card-icon">
-                🔬
-            </div>
+            <div class="card-icon">🔬</div>
 
-            <h3>
-                Cristalino
-            </h3>
+            <h3>Cristalino</h3>
 
             <p>
-
                 Participa da focalização da luz
                 que entra no olho.
-
             </p>
 
         </article>
 
-
         <article class="card">
 
-            <div class="card-icon">
-                🔎
-            </div>
+            <div class="card-icon">🔎</div>
 
-            <h3>
-                Acomodação
-            </h3>
+            <h3>Acomodação</h3>
 
             <p>
-
                 Permite que o olho ajuste o foco
                 para diferentes distâncias.
-
             </p>
 
         </article>
-
 
         <article class="card">
 
-            <div class="card-icon">
-                ⚡
-            </div>
+            <div class="card-icon">⚡</div>
 
-            <h3>
-                Refração
-            </h3>
+            <h3>Refração</h3>
 
             <p>
-
                 A luz muda de direção ao atravessar
                 diferentes meios ópticos.
-
             </p>
 
         </article>
-
 
     </div>
 
 </section>
 
+<!-- 04 -->
 
-<!-- =====================================================
-     04 - TRATAMENTOS
-===================================================== -->
-
-<section
-    id="tratamentos"
-    class="section"
->
+<section id="tratamentos" class="section">
 
     <div class="section-heading">
 
-        <div class="number">
-            04
-        </div>
+        <div class="number">04</div>
 
         <div>
 
-            <h2>
-                Soluções
-            </h2>
+            <h2>Tratamentos e soluções</h2>
 
             <p class="subtitle">
-                Algumas formas de correção visual.
+                Algumas formas de correção e cuidados.
             </p>
 
         </div>
 
     </div>
-
 
     <div class="cards">
 
-
         <article class="card">
 
-            <div class="card-icon">
-                👓
-            </div>
+            <div class="card-icon">👓</div>
 
-            <h3>
-                Óculos
-            </h3>
+            <h3>Óculos</h3>
 
             <p>
-
                 Óculos para perto ou multifocais
                 podem auxiliar na correção da visão.
-
             </p>
 
         </article>
 
-
         <article class="card">
 
-            <div class="card-icon">
-                👁️
-            </div>
+            <div class="card-icon">👁️</div>
 
-            <h3>
-                Lentes
-            </h3>
+            <h3>Lentes de contato</h3>
 
             <p>
-
                 Lentes de contato podem ser uma
-                alternativa em determinadas situações.
-
+                alternativa em determinadas situações,
+                conforme orientação profissional.
             </p>
 
         </article>
-
 
         <article class="card">
 
-            <div class="card-icon">
-                🩺
-            </div>
+            <div class="card-icon">💧</div>
 
-            <h3>
-                Avaliação
-            </h3>
+            <h3>Uso de colírios</h3>
 
             <p>
-
-                O acompanhamento profissional é
-                importante para avaliar a saúde ocular.
-
+                Alguns colírios podem ser utilizados
+                em situações específicas relacionadas
+                à visão de perto. O uso deve ser feito
+                somente com orientação de um
+                oftalmologista.
             </p>
 
         </article>
 
+        <article class="card">
+
+            <div class="card-icon">🩺</div>
+
+            <h3>Avaliação profissional</h3>
+
+            <p>
+                O acompanhamento com um profissional
+                da saúde ocular é importante para
+                avaliar a visão e indicar a opção
+                mais adequada.
+            </p>
+
+        </article>
+
+    </div>
+
+    <div class="alert">
+
+        <span>⚠️</span>
+
+        <p>
+            Não utilize colírios por conta própria.
+            Cada produto possui uma indicação específica
+            e deve ser utilizado de acordo com orientação
+            profissional.
+        </p>
 
     </div>
 
 </section>
 
+<!-- 05 -->
 
-<!-- =====================================================
-     05 - ACESSIBILIDADE
-===================================================== -->
-
-<section
-    id="dicas"
-    class="section"
->
+<section id="dicas" class="section">
 
     <div class="section-heading">
 
-        <div class="number">
-            05
-        </div>
+        <div class="number">05</div>
 
         <div>
 
-            <h2>
-                Acessibilidade digital
-            </h2>
+            <h2>Acessibilidade digital</h2>
 
             <p class="subtitle">
                 Recursos para facilitar a leitura.
@@ -1694,280 +1379,297 @@ body.contraste .member span {
 
     </div>
 
-
     <div class="tips">
 
-
         <div class="tip">
-
-            <div class="check">
-                ✓
-            </div>
-
-            <p>
-                Utilize fontes maiores quando necessário.
-            </p>
-
+            <div class="check">✓</div>
+            <p>Utilize fontes maiores quando necessário.</p>
         </div>
 
-
         <div class="tip">
-
-            <div class="check">
-                ✓
-            </div>
-
-            <p>
-                Prefira textos com alto contraste.
-            </p>
-
+            <div class="check">✓</div>
+            <p>Prefira textos com alto contraste.</p>
         </div>
 
-
         <div class="tip">
-
-            <div class="check">
-                ✓
-            </div>
-
+            <div class="check">✓</div>
             <p>
                 Mantenha uma boa iluminação durante
                 a leitura.
             </p>
-
         </div>
 
-
         <div class="tip">
-
-            <div class="check">
-                ✓
-            </div>
-
+            <div class="check">✓</div>
             <p>
                 Faça pausas durante o uso prolongado
                 de telas.
             </p>
-
         </div>
 
-
         <div class="tip">
-
-            <div class="check">
-                ✓
-            </div>
-
+            <div class="check">✓</div>
             <p>
                 Aumente o zoom de páginas quando
                 necessário.
             </p>
-
         </div>
 
-
         <div class="tip">
-
-            <div class="check">
-                ✓
-            </div>
-
+            <div class="check">✓</div>
             <p>
                 Procure orientação profissional diante
                 de dificuldades visuais persistentes.
             </p>
-
         </div>
-
 
     </div>
 
 </section>
 
+<!-- 06 - PROTÓTIPO -->
 
-<!-- =====================================================
-     06 - PROJETO / EQUIPE
-===================================================== -->
-
-<section
-    id="projeto"
-    class="section"
->
+<section id="prototipo" class="section">
 
     <div class="section-heading">
 
-        <div class="number">
-            06
-        </div>
+        <div class="number">06</div>
 
         <div>
 
-            <h2>
-                O projeto
-            </h2>
+            <h2>Nosso protótipo</h2>
 
             <p class="subtitle">
-                Tecnologia a favor da informação.
+                LED com potenciômetro para controle da iluminação.
             </p>
 
         </div>
 
     </div>
 
-
     <p>
-
-        O projeto
-        <strong>
-            Olhos no Futuro: Presbiopia e Soluções
-        </strong>
-
-        foi desenvolvido para unir conhecimentos
-        de física, programação e tecnociência na
-        criação de um site acessível.
-
+        Como parte do projeto <strong>Olhos no Futuro</strong>,
+        desenvolvemos um protótipo utilizando um
+        <strong>LED e um potenciômetro</strong>.
+        A ideia é demonstrar, de forma simples, como a
+        tecnologia e a eletrônica podem ser utilizadas
+        para criar recursos de acessibilidade.
     </p>
 
+    <div class="prototype">
 
-    <div class="team">
+        <article class="prototype-card">
 
+            <div class="prototype-icon">💡</div>
 
-        <div class="member">
+            <h3>LED</h3>
 
-            <div class="avatar">
-                EV
-            </div>
+            <p>
+                O LED funciona como uma fonte de iluminação.
+                Ele pode representar uma luz auxiliar para
+                melhorar a iluminação do ambiente durante
+                atividades como leitura e escrita.
+            </p>
 
-            <strong>
-                Evelyn Vitoria 
-            </strong>
+        </article>
 
-        </div>
+        <article class="prototype-card">
 
+            <div class="prototype-icon">🎛️</div>
 
-        <div class="member">
+            <h3>Potenciômetro</h3>
 
-            <div class="avatar">
-                CI
-            </div>
+            <p>
+                O potenciômetro permite controlar a intensidade
+                da luz. Ao girar o componente, podemos aumentar
+                ou diminuir a iluminação do LED.
+            </p>
 
-            <strong>
-                Cinthia
-            </strong>
+        </article>
 
-        </div>
+        <article class="prototype-card">
 
+            <div class="prototype-icon">⚙️</div>
 
-        <div class="member">
+            <h3>Funcionamento</h3>
 
-            <div class="avatar">
-                VI
-            </div>
+            <p>
+                O potenciômetro altera a quantidade de energia
+                enviada ao LED. Dessa forma, conseguimos
+                controlar seu brilho e testar diferentes níveis
+                de iluminação.
+            </p>
 
-            <strong>
-                Vitor
-            </strong>
+        </article>
 
-        </div>
+    </div>
 
+    <div class="prototype-highlight">
 
-        <div class="member">
+        <h3>👁️ Como isso pode ajudar pessoas com presbiopia?</h3>
 
-            <div class="avatar">
-                JE
-            </div>
+        <p>
+            Pessoas com presbiopia podem apresentar maior
+            dificuldade para realizar atividades de perto,
+            como ler livros, textos e utilizar celulares.
+            Uma iluminação adequada pode facilitar essas
+            tarefas em determinadas situações.
+        </p>
 
-            <strong>
-                Jeniffer
-            </strong>
+        <p style="margin-top:15px;">
+            Nosso protótipo permite ajustar a intensidade
+            da luz de acordo com a necessidade do usuário.
+            Assim, ele demonstra uma possível solução de
+            acessibilidade baseada em um recurso simples,
+            de baixo custo e fácil de controlar.
+        </p>
 
-        </div>
+    </div>
 
+    <div class="alert">
+
+        <span>💡</span>
+
+        <p>
+            O protótipo é uma demonstração educacional.
+            Ele não trata a presbiopia nem substitui óculos,
+            avaliação oftalmológica ou qualquer tratamento
+            recomendado por um profissional.
+        </p>
 
     </div>
 
 </section>
 
+<!-- 07 - INTEGRANTES -->
 
-<!-- =====================================================
-     07 - FONTES
-===================================================== -->
+<section id="projeto" class="section">
+
+    <div class="section-heading">
+
+        <div class="number">07</div>
+
+        <div>
+
+            <h2>Integrantes</h2>
+
+            <p class="subtitle">
+                Equipe responsável pelo projeto.
+            </p>
+
+        </div>
+
+    </div>
+
+    <p>
+        Conheça os integrantes responsáveis pelo
+        desenvolvimento do projeto
+        <strong>Olhos no Futuro</strong>.
+    </p>
+
+    <div class="team">
+
+        <div class="member">
+
+            <div class="avatar">EV</div>
+
+            <strong>Evelyn Vitoria</strong>
+
+        </div>
+
+        <div class="member">
+
+            <div class="avatar">VI</div>
+
+            <strong>Vitor</strong>
+
+        </div>
+
+        <div class="member">
+
+            <div class="avatar">CI</div>
+
+            <strong>Cintia</strong>
+
+        </div>
+
+        <div class="member">
+
+            <div class="avatar">JH</div>
+
+            <strong>Jhenyffer</strong>
+
+        </div>
+
+        <div class="member">
+
+            <div class="avatar">RA</div>
+
+            <strong>Rahiane</strong>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- 08 - FONTES -->
 
 <section class="section">
 
     <div class="section-heading">
 
-        <div class="number">
-            07
-        </div>
+        <div class="number">08</div>
 
         <div>
 
-            <h2>
-                Fontes consultadas
-            </h2>
+            <h2>Fontes consultadas</h2>
 
             <p class="subtitle">
-                Referências da pesquisa.
+                Referências utilizadas na pesquisa.
             </p>
 
         </div>
 
     </div>
 
-
     <ul class="sources">
 
-        <li>
-            🏥 Einstein Hospital Israelita
-        </li>
+        <li>🏥 Einstein Hospital Israelita</li>
 
-        <li>
-            🩺 Saúde Bem Estar
-        </li>
+        <li>🩺 Saúde Bem Estar</li>
 
-        <li>
-            📚 Tua Saúde
-        </li>
+        <li>📚 Tua Saúde</li>
 
-        <li>
-            💻 iClinic
-        </li>
+        <li>💻 iClinic</li>
 
-        <li>
-            👁️ Vision One
-        </li>
+        <li>👁️ Vision One</li>
 
-        <li>
-            🏥 Hospital do Olho
-        </li>
+        <li>🏥 Hospital do Olho</li>
+
+        <li>👁️ H.Olhos</li>
+
+        <li>🏥 Clinic Vizon</li>
 
     </ul>
 
 </section>
 
-
 </div>
 
 </main>
 
-
-<!-- =====================================================
-     RODAPÉ
-===================================================== -->
+<!-- ================= RODAPÉ ================= -->
 
 <footer>
 
     <div class="container footer-content">
 
-
         <div>
 
             <h2>
                 👁️ OLHOS
-                <span>
-                    NO FUTURO
-                </span>
+                <span>NO FUTURO</span>
             </h2>
 
             <p>
@@ -1976,68 +1678,55 @@ body.contraste .member span {
 
         </div>
 
-
         <div>
 
             <p>
-
                 Projeto educacional sobre presbiopia,
                 física, programação e acessibilidade
                 digital.
-
             </p>
 
         </div>
 
-
     </div>
 
-
     <div class="copyright">
-
         © 2026 Olhos no Futuro • Projeto educacional
-
     </div>
 
 </footer>
 
-
-<!-- =====================================================
-     JAVASCRIPT
-===================================================== -->
+<!-- ================= JAVASCRIPT ================= -->
 
 <script>
 
 let escala =
-    Number(
-        localStorage.getItem("escalaFonte")
-    ) || 1;
-
+    Number(localStorage.getItem("escalaFonte")) || 1;
 
 let contraste =
-    localStorage.getItem("contraste")
-    === "true";
+    localStorage.getItem("contraste") === "true";
 
-
-const root =
-    document.documentElement;
-
+const root = document.documentElement;
 
 const aumentar =
     document.getElementById("aumentar");
 
-
 const diminuir =
     document.getElementById("diminuir");
-
 
 const normal =
     document.getElementById("normal");
 
-
 const contrasteBtn =
     document.getElementById("contraste");
 
+const leituraBtn =
+    document.getElementById("leitura");
+
+const pararLeituraBtn =
+    document.getElementById("pararLeitura");
+
+/* ================= ACESSIBILIDADE ================= */
 
 function atualizarSite() {
 
@@ -2046,34 +1735,26 @@ function atualizarSite() {
         escala
     );
 
-
     document.body.classList.toggle(
         "contraste",
         contraste
     );
-
 
     contrasteBtn.textContent =
         contraste
         ? "◑ Contraste normal"
         : "◐ Alto contraste";
 
-
     localStorage.setItem(
         "escalaFonte",
         escala
     );
 
-
     localStorage.setItem(
         "contraste",
         contraste
     );
-
 }
-
-
-/* AUMENTAR FONTE */
 
 aumentar.addEventListener(
     "click",
@@ -2081,20 +1762,14 @@ aumentar.addEventListener(
 
         escala = Math.min(
             1.5,
-
             Number(
-                (escala + 0.1)
-                .toFixed(1)
+                (escala + 0.1).toFixed(1)
             )
         );
 
         atualizarSite();
-
     }
 );
-
-
-/* DIMINUIR FONTE */
 
 diminuir.addEventListener(
     "click",
@@ -2102,20 +1777,14 @@ diminuir.addEventListener(
 
         escala = Math.max(
             0.8,
-
             Number(
-                (escala - 0.1)
-                .toFixed(1)
+                (escala - 0.1).toFixed(1)
             )
         );
 
         atualizarSite();
-
     }
 );
-
-
-/* FONTE NORMAL */
 
 normal.addEventListener(
     "click",
@@ -2124,12 +1793,8 @@ normal.addEventListener(
         escala = 1;
 
         atualizarSite();
-
     }
 );
-
-
-/* ALTO CONTRASTE */
 
 contrasteBtn.addEventListener(
     "click",
@@ -2138,22 +1803,149 @@ contrasteBtn.addEventListener(
         contraste = !contraste;
 
         atualizarSite();
+    }
+);
+
+/* ================= LEITURA AUTOMÁTICA ================= */
+
+let lendo = false;
+let pausado = false;
+
+function obterTextoParaLeitura() {
+
+    const main =
+        document.querySelector("main");
+
+    if (!main) {
+        return "";
+    }
+
+    return main.innerText
+        .replace(/\s+/g, " ")
+        .trim();
+}
+
+leituraBtn.addEventListener(
+    "click",
+    function() {
+
+        if (!("speechSynthesis" in window)) {
+
+            alert(
+                "Seu navegador não oferece suporte à leitura automática."
+            );
+
+            return;
+        }
+
+        if (pausado) {
+
+            speechSynthesis.resume();
+
+            pausado = false;
+            lendo = true;
+
+            leituraBtn.textContent =
+                "⏸ Pausar leitura";
+
+            return;
+        }
+
+        if (lendo) {
+
+            speechSynthesis.pause();
+
+            pausado = true;
+
+            leituraBtn.textContent =
+                "▶ Continuar leitura";
+
+            return;
+        }
+
+        const texto =
+            obterTextoParaLeitura();
+
+        if (!texto) {
+            return;
+        }
+
+        speechSynthesis.cancel();
+
+        const fala =
+            new SpeechSynthesisUtterance(texto);
+
+        fala.lang = "pt-BR";
+
+        fala.rate = 0.9;
+
+        fala.pitch = 1;
+
+        fala.volume = 1;
+
+        fala.onstart =
+            function() {
+
+                lendo = true;
+                pausado = false;
+
+                leituraBtn.textContent =
+                    "⏸ Pausar leitura";
+            };
+
+        fala.onend =
+            function() {
+
+                lendo = false;
+                pausado = false;
+
+                leituraBtn.textContent =
+                    "🔊 Iniciar leitura";
+            };
+
+        fala.onerror =
+            function() {
+
+                lendo = false;
+                pausado = false;
+
+                leituraBtn.textContent =
+                    "🔊 Iniciar leitura";
+            };
+
+        speechSynthesis.speak(fala);
 
     }
 );
 
+/* ================= PARAR LEITURA ================= */
 
-/* INICIALIZAÇÃO */
+pararLeituraBtn.addEventListener(
+    "click",
+    function() {
+
+        if ("speechSynthesis" in window) {
+
+            speechSynthesis.cancel();
+
+            lendo = false;
+            pausado = false;
+
+            leituraBtn.textContent =
+                "🔊 Iniciar leitura";
+        }
+
+    }
+);
+
+/* ================= INICIALIZAÇÃO ================= */
 
 atualizarSite();
 
-
-/* ROLAGEM SUAVE */
+/* ================= NAVEGAÇÃO SUAVE ================= */
 
 document
-    .querySelectorAll(
-        'a[href^="#"]'
-    )
+    .querySelectorAll('a[href^="#"]')
     .forEach(
         function(link) {
 
@@ -2166,18 +1958,14 @@ document
                             link.getAttribute("href")
                         );
 
-
                     if (!destino) {
                         return;
                     }
 
-
                     event.preventDefault();
-
 
                     destino.scrollIntoView({
                         behavior: "smooth",
-
                         block: "start"
                     });
 
@@ -2187,7 +1975,20 @@ document
         }
     );
 
+/* ================= PARA A LEITURA AO FECHAR ================= */
+
+window.addEventListener(
+    "beforeunload",
+    function() {
+
+        if ("speechSynthesis" in window) {
+            speechSynthesis.cancel();
+        }
+
+    }
+);
+
 </script>
 
 </body>
-</html> 
+</html>
